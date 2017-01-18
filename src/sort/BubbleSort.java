@@ -8,21 +8,21 @@ import generator.RandomGenerator;
 
 public class BubbleSort {
 	public static void main(String[] args) {
-		Integer[] arr = Generated.array(new RandomGenerator.Integer(100), Integer.class, 20);
-		sort(arr, Generator.Order.ASC);
-		System.err.println(Arrays.toString(arr));
+		Integer[] a = Generated.array(new RandomGenerator.Integer(100), Integer.class, 20);
+		sort(a, Generator.Order.ASC);
+		System.err.println(Arrays.toString(a));
 	}
 	
-	public static void sort(Integer[] orig, Generator.Order order) {
-		for (int i = 0; i < orig.length; i++) {
-			for (int j = i + 1; j < orig.length; j++) {
+	public static void sort(Integer[] a, Generator.Order order) {
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i + 1; j < a.length; j++) {
 				switch (order) {
 				default:
 				case ASC:
-					if (orig[i] > orig[j]) swap(orig, i, j);
+					if (a[i] > a[j]) swap(a, i, j);
 					break;
 				case DESC:
-					if (orig[i] < orig[j]) swap(orig, i, j);
+					if (a[i] < a[j]) swap(a, i, j);
 					break;
 				}
 			}
